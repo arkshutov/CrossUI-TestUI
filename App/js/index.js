@@ -56,7 +56,7 @@ xui.Class('App', 'xui.Module',{
                         "target" : "msg",
                         "args" : [
                             "Hello",
-                            "Hello, {page.user_name.getValue()}"
+                            "Hello, {page.xui_ui_input5}"
                         ],
                         "method" : "pop",
                         "okFlag" : "_confirm_yes",
