@@ -19,7 +19,37 @@ xui.Class('App', 'xui.Module',{
         iniComponents : function(){
             // [[Code created by CrossUI RAD Studio
             var host=this, children=[], append=function(child){children.push(child.get(0));};
-
+            
+            append(
+                xui.create("xui.UI.Label")
+                .setHost(host,"xui_ui_label8")
+                .setLeft("6.095238095238095em")
+                .setTop("9.142857142857142em")
+                .setWidth("32.91428571428571em")
+                .setCaption("Label")
+                .setHAlign("center")
+            );
+            
+            append(
+                xui.create("xui.UI.Input")
+                .setHost(host,"xui_ui_input5")
+                .setLeft("6.857142857142857em")
+                .setTop("4.571428571428571em")
+                .setWidth("17.98095238095238em")
+                .setHeight("1.7523809523809524em")
+                .setLabelSize("8em")
+                .setLabelCaption("Input")
+            );
+            
+            append(
+                xui.create("xui.UI.Button")
+                .setHost(host,"xui_ui_button5")
+                .setLeft("26.666666666666668em")
+                .setTop("4.571428571428571em")
+                .setWidth("12.038095238095238em")
+                .setCaption("Say Hello!")
+            );
+            
             return children;
             // ]]Code created by CrossUI RAD Studio
         },
