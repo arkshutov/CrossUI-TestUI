@@ -87,7 +87,8 @@ xui.Class('App', 'xui.Module',{
         */
         _xui_ui_button5_onclick:function(profile, e, src, value){
             var ns = this, uictrl = profile.boxing();
-            alert(page.xui_ui_input5.getValue(  ));
+            /*alert(page.xui_ui_input5.getValue(  ));
+             */
         }
         /*,
         // To determine how properties affects this module
