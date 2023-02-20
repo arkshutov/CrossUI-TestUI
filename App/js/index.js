@@ -57,7 +57,8 @@ xui.Class('App', 'xui.Module',{
                         "target" : "msg",
                         "args" : [
                             "Hello",
-                            "Hello, {page.xui_ui_input5.getValue()}"
+                            //"Hello, {page.xui_ui_input5.getValue()}"
+                            "Hello, {user_name.getValue()}"
                         ],
                         "method" : "pop",
                         "okFlag" : "_confirm_yes",
@@ -91,11 +92,8 @@ xui.Class('App', 'xui.Module',{
             /*alert(page.xui_ui_input5.getValue(  ));
              */
             _.asyRun(function(){
-                //user_name.setUIValue('123456').updateValue();
                 user_name.updateValue();
-            //    xui.pop(user_name.getValue());
             },1000);
-             //user_name.updateValue();
         }
         /*,
         // To determine how properties affects this module
