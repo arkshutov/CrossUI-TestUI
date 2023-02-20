@@ -87,12 +87,15 @@ xui.Class('App', 'xui.Module',{
         */
         _xui_ui_button5_onclick:function(profile, e, src, value){
             var ns = this, uictrl = profile.boxing();
+            
             /*alert(page.xui_ui_input5.getValue(  ));
              */
             _.asyRun(function(){
-                user_name.setUIValue('123456').updateValue();
-                xui.pop(user_name.getValue());
+                //user_name.setUIValue('123456').updateValue();
+                user_name.updateValue();
+            //    xui.pop(user_name.getValue());
             },1000);
+             //user_name.updateValue();
         }
         /*,
         // To determine how properties affects this module
