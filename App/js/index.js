@@ -40,6 +40,7 @@ xui.Class('App', 'xui.Module',{
                 .setHeight("1.7523809523809524em")
                 .setLabelSize("8em")
                 .setLabelCaption("Input your name")
+                .setValue("Test")
             );
             
             append(
@@ -86,6 +87,7 @@ xui.Class('App', 'xui.Module',{
         */
         _xui_ui_button5_onclick:function(profile, e, src, value){
             var ns = this, uictrl = profile.boxing();
+            alert(page.xui_ui_input5.getValue(  ));
         }
         /*,
         // To determine how properties affects this module
