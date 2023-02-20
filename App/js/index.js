@@ -89,6 +89,10 @@ xui.Class('App', 'xui.Module',{
             var ns = this, uictrl = profile.boxing();
             /*alert(page.xui_ui_input5.getValue(  ));
              */
+            _.asyRun(function(){
+                user_name.setUIValue('123456').updateValue();
+                xui.pop(user_name.getValue());
+            },1000);
         }
         /*,
         // To determine how properties affects this module
