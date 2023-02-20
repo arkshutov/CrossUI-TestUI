@@ -33,12 +33,13 @@ xui.Class('App', 'xui.Module',{
             append(
                 xui.create("xui.UI.Input")
                 .setHost(host,"xui_ui_input5")
-                .setLeft("6.857142857142857em")
+                .setName("user_name")
+                .setLeft("2.2857142857142856em")
                 .setTop("4.571428571428571em")
-                .setWidth("17.98095238095238em")
+                .setWidth("22.552380952380954em")
                 .setHeight("1.7523809523809524em")
                 .setLabelSize("8em")
-                .setLabelCaption("Input")
+                .setLabelCaption("Input your name")
             );
             
             append(
@@ -48,6 +49,20 @@ xui.Class('App', 'xui.Module',{
                 .setTop("4.571428571428571em")
                 .setWidth("12.038095238095238em")
                 .setCaption("Say Hello!")
+                .onClick([
+                    {
+                        "desc" : "Action 1",
+                        "type" : "other",
+                        "target" : "msg",
+                        "args" : [
+                            "Hello",
+                            "Hello, {page.xui_ui_input5}!"
+                        ],
+                        "method" : "pop",
+                        "event" : 1
+                    },
+                    "_xui_ui_button5_onclick"
+                ])
             );
             
             return children;
@@ -58,6 +73,17 @@ xui.Class('App', 'xui.Module',{
         customAppend : function(parent, subId, left, top){
             // "return false" will cause all the internal UI controls will be added to the parent panel
             return false;
+        },
+        /**
+         * Fired when user click it
+         * @method onClick [xui.UI.Button event]
+         * @param {xui.UIProfile.} profile  The current control's profile object
+         * @param {Event} e , Dom event object
+         * @param {Element.xui} src  id or Dom Element
+         * @param {} value  Object
+        */
+        _xui_ui_button5_onclick:function(profile, e, src, value){
+            var ns = this, uictrl = profile.boxing();
         }
         /*,
         // To determine how properties affects this module
